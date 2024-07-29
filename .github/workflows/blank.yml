@@ -49,4 +49,5 @@ jobs:
           role-to-assume: ${{ secrets.CI_AWS_CODE_BUILD_ROLE_ARN }} # optional
           # Role duration in seconds. Default is one hour.
           # role-duration-seconds: # optional
+          audience: sts.amazonaws.com
           
