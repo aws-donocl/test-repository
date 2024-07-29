@@ -50,4 +50,8 @@ jobs:
           # Role duration in seconds. Default is one hour.
           # role-duration-seconds: # optional
           audience: sts.amazonaws.com
+      - name: Run CodeBuild
+        uses: aws-actions/aws-codebuild-run-build@v1
+        with:
+          project-name: another-code-build-test
           
