@@ -43,7 +43,7 @@ jobs:
           # AWS Region, e.g. us-east-2
           aws-region: us-west-2
           # The Amazon Resource Name (ARN) of the role to assume. Use the provided credentials to assume an IAM role and configure the Actions environment with the assumed role credentials rather than with the provided credentials.
-          # role-to-assume: # optional
+          role-to-assume: ${{ secrets.CI_AWS_CODE_BUILD_ROLE_ARN }} # optional
           # Role duration in seconds. Default is one hour.
           # role-duration-seconds: # optional
           
