@@ -1,0 +1,34 @@
+name: Automated Release
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on updates to the "main" branch which include a version tag
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the main branch
+        uses: actions/checkout@latest
+      - name: List files
+        run: |
+          ls
+      - name: Publish Release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            helloworld.py
+            helloworld2.py
+          
+          
