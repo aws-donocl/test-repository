@@ -24,6 +24,8 @@ jobs:
         # run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
         - name: Check node version
           run: node --version
+        - name: Check npm version
+          run: npm --version
         - name: Install Dependencies
           run: |
             npm install --global yarn
