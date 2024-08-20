@@ -31,6 +31,6 @@ jobs:
         - name: Install Dependencies
           run: |
             # npm install --global yarn
-            sudo apt-get update
-            sudo apt-get install build-essential g++ libx11-dev libxkbfile-dev libsecret-1-dev libkrb5-dev python-is-python3 quilt
+            apt-get update
+            apt-get install build-essential g++ libx11-dev libxkbfile-dev libsecret-1-dev libkrb5-dev python-is-python3 quilt
         
