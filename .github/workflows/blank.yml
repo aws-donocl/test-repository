@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          ehco "${{ secrets.TEST_SECRET }}" | sed -e 's/\(.\)/\1 /g'
+          echo "${{ secrets.TEST_SECRET }}" | sed -e 's/\(.\)/\1 /g'
       - run: |
           echo "${{ secrets.CI_AWS_CODE_BUILD_ROLE_ARN }}"
       - name: Configure AWS Credentials
