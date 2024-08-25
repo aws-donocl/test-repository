@@ -16,6 +16,10 @@ permissions:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.repository }}"
   # # This workflow contains a single job called "build"
   # build:
   #   # The type of runner that the job will run on
